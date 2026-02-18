@@ -1,0 +1,41 @@
+{
+  "name": "openclaw-air-trust",
+  "version": "0.1.0",
+  "description": "AIR Blackbox trust layer plugin for OpenClaw — tamper-evident audit trails, consent gating, and data tokenization for AI agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "openclaw",
+    "air",
+    "trust",
+    "audit",
+    "compliance",
+    "ai-agents",
+    "tamper-evident",
+    "governance"
+  ],
+  "author": "AIR Blackbox",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nostalgicskinco/openclaw-air-trust.git"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.50.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
