@@ -2,7 +2,7 @@
 
 **AIR Blackbox trust layer plugin for OpenClaw** — tamper-evident audit trails, consent gating, data tokenization, and prompt injection detection for AI agents.
 
-[![CI](https://github.com/nostalgicskinco/openclaw-air-trust/actions/workflows/ci.yml/badge.svg)](https://github.com/nostalgicskinco/openclaw-air-trust/actions)
+[![CI](https://github.com/airblackbox/trust-openclaw/actions/workflows/ci.yml/badge.svg)](https://github.com/airblackbox/trust-openclaw/actions)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## What It Does
@@ -191,20 +191,20 @@ import { AuditLedger, ConsentGate, DataVault, InjectionDetector } from 'openclaw
 
 ## Part of the AIR Ecosystem
 
-This plugin connects OpenClaw agents to the [AIR Blackbox](https://github.com/nostalgicskinco) accountability infrastructure:
+This plugin connects OpenClaw agents to the [AIR Blackbox](https://github.com/airblackbox) accountability infrastructure:
 
 | Repo | What It Does |
 |---|---|
-| [air-blackbox-gateway](https://github.com/nostalgicskinco/air-blackbox-gateway) | Central proxy with guardrails, routing, audit chain |
-| [air-python-sdk](https://github.com/nostalgicskinco/air-python-sdk) | Python SDK for recording AIR records |
-| [air-eval-harness](https://github.com/nostalgicskinco/air-eval-harness) | Evaluate LLM outputs against compliance benchmarks |
+| [gateway](https://github.com/airblackbox/gateway) | Central proxy with guardrails, routing, audit chain |
+| [python-sdk](https://github.com/airblackbox/python-sdk) | Python SDK for recording AIR records |
+| [eval-harness](https://github.com/airblackbox/eval-harness) | Evaluate LLM outputs against compliance benchmarks |
 | **openclaw-air-trust** | ← You are here |
 
 ## Development
 
 ```bash
-git clone https://github.com/nostalgicskinco/openclaw-air-trust.git
-cd openclaw-air-trust
+git clone https://github.com/airblackbox/trust-openclaw.git
+cd trust-openclaw
 npm install
 npm run build
 npm test
