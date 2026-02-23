@@ -25,7 +25,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nostalgicskinco/openclaw-air-trust.git"
+    "url": "https://github.com/airblackbox/trust-openclaw.git"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
