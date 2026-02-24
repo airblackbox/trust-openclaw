@@ -1,6 +1,8 @@
 # openclaw-air-trust
 
-**AIR Blackbox trust layer plugin for OpenClaw** — tamper-evident audit trails, consent gating, data tokenization, and prompt injection detection for AI agents.
+**EU AI Act compliance infrastructure for OpenClaw TypeScript agents.** Drop-in trust layer that adds tamper-evident audit logging, PII tokenization, consent-based tool gating, and prompt injection detection — making your TypeScript agent stack compliant with Articles 9, 10, 11, 12, 14, and 15 of the EU AI Act.
+
+> The EU AI Act enforcement date for high-risk AI systems is **August 2, 2026**. See the [full compliance mapping](./docs/eu-ai-act-compliance.md) for article-by-article coverage.
 
 [![CI](https://github.com/airblackbox/trust-openclaw/actions/workflows/ci.yml/badge.svg)](https://github.com/airblackbox/trust-openclaw/actions)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -189,16 +191,30 @@ Each component can be used standalone:
 import { AuditLedger, ConsentGate, DataVault, InjectionDetector } from 'openclaw-air-trust';
 ```
 
-## Part of the AIR Ecosystem
+## EU AI Act Compliance
 
-This plugin connects OpenClaw agents to the [AIR Blackbox](https://github.com/airblackbox) accountability infrastructure:
+| EU AI Act Article | Requirement | AIR Feature |
+|---|---|---|
+| Art. 9 | Risk management | ConsentGate risk classification |
+| Art. 10 | Data governance | DataVault PII tokenization |
+| Art. 11 | Technical documentation | Full call graph audit logging |
+| Art. 12 | Record-keeping | HMAC-SHA256 tamper-evident chain |
+| Art. 14 | Human oversight | Consent-based tool blocking |
+| Art. 15 | Robustness & security | InjectionDetector + multi-layer defense |
 
-| Repo | What It Does |
-|---|---|
-| [gateway](https://github.com/airblackbox/gateway) | Central proxy with guardrails, routing, audit chain |
-| [python-sdk](https://github.com/airblackbox/python-sdk) | Python SDK for recording AIR records |
-| [eval-harness](https://github.com/airblackbox/eval-harness) | Evaluate LLM outputs against compliance benchmarks |
-| **openclaw-air-trust** | ← You are here |
+See [docs/eu-ai-act-compliance.md](./docs/eu-ai-act-compliance.md) for the full article-by-article mapping.
+
+## AIR Blackbox Ecosystem
+
+| Package | Framework | Install |
+|---|---|---|
+| `air-langchain-trust` | LangChain / LangGraph | `pip install air-langchain-trust` |
+| `air-crewai-trust` | CrewAI | `pip install air-crewai-trust` |
+| `air-openai-agents-trust` | OpenAI Agents SDK | `pip install air-openai-agents-trust` |
+| `air-autogen-trust` | Microsoft AutoGen | `pip install air-autogen-trust` |
+| `openclaw-air-trust` | TypeScript / Node.js | `npm install openclaw-air-trust` |
+| `air-compliance` | Compliance checker CLI | `pip install air-compliance` |
+| Gateway | Any HTTP agent | `docker pull ghcr.io/airblackbox/gateway:main` |
 
 ## Development
 
@@ -212,4 +228,4 @@ npm test
 
 ## License
 
-Apache 2.0
+Apache-2.0
